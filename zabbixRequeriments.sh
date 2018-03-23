@@ -8,6 +8,7 @@
 echo "***********************************************************"
 echo "*              Zabbix Requeriments                        *"
 echo "*                  Ver. 0.1.0                             *"
+echo "*              Zabbix terget: 3.x.x                       *"
 echo "***********************************************************"
 
 echo "Você deseja realizar  a configuração do sistema para instalação do zabbix 3.x.x?  Digite 1 para SIM ou 0 para NÃO."
