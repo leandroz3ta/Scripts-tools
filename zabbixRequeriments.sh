@@ -20,7 +20,8 @@ if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
 	echo "deb http://security.debian.org/ jessie/updates main contrib non-free" >> /etc/apt/sources.list; 
 	echo "deb http://http.debian.net/debian/ jessie-updates main contrib non-free" >> /etc/apt/sources.list; 
 	echo "deb http://http.debian.net/debian/ jessie-backports main contrib non-free" >> /etc/apt/sources.list; 
-	echo "===> Passo 2 - Atualizando lista de repositorios..."; apt-get update; 
+	echo "===> Passo 2 - Atualizando lista de repositorios..."; 
+	apt-get update; 
 	echo "===> Passo 3 - Instalando pacotes essenciais..."; 
 	apt-get -y install build-essential snmp vim libssh2-1-dev libssh2-1 libopenipmi-dev libsnmp-dev wget libcurl4-gnutls-dev fping libxml2 libxml2-dev curl libcurl3-gnutls libcurl3-gnutls-dev libiksemel-dev libiksemel-utils libiksemel3 sudo; 
 	echo "===> Passo 4 - Gravando URL de download do Java na lista de repositorios..."; 
