@@ -41,7 +41,7 @@ if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
 	echo "===> Passo 10 - Inicializando Mysql server..."; 
 	service mysql start; 
 	echo "===> Passo 11 - Instalando servidor Apache..."; 
-	apt-get install -y apache2 php5 php5-mysql libapache2-mod-php5 php5-gd php-net-socket libpq5 libpq-dev mysql-server mysql-client libmysqld-dev phpmyadmin libevent-dev; 
+	apt-get install -y apache2 php5 php5-mysql libapache2-mod-php5 php5-gd php-net-socket libpq5 libpq-dev mysql-server mysql-client libmysqld-dev phpmyadmin libevent-dev libpcre3-dev; 
     #comando de atualização 
     
     sleep 1 #aguardar 1 segundo depois exibe a mensagem abaixo
