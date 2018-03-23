@@ -10,7 +10,7 @@ echo "*              Zabbix Requeriments                        *"
 echo "*                  Ver. 0.1.0                             *"
 echo "***********************************************************"
 
-echo "Você deseja realizar  a configuração do sistema para instalação do zabbix 3.x.x?  Digite 1)Sim  0)Não"
+echo "Você deseja realizar  a configuração do sistema para instalação do zabbix 3.x.x?  Digite 1 para SIM ou 0 para NÃO."
 read OPCAO #guarda opção inserida pelo usuário
 
 if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
