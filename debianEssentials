@@ -1,0 +1,33 @@
+#!/bin/bash
+#autor: Leandro z3ta
+#Em caso de bugs enviar um email para
+#email: leandroz3ta@gmail.com
+#Debian Essentials
+
+
+echo "***********************************************************"
+echo "*              Debian Essentials                          *"
+echo "*                  Ver. 0.1.0                             *"
+echo "***********************************************************"
+
+echo "Você deseja realizar  a configuração do sistema?  Digite 1)Sim  0)Não"
+read OPCAO #guarda opção inserida pelo usuário
+
+if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
+
+    echo "Passo 1 - Gravando lista de repositorios...";
+        echo "deb http://http.debian.net/debian/ jessie main non-free contrib" >> /etc/apt/sources.list;
+        echo "deb http://security.debian.org/ jessie/updates main contrib non-free" >> /etc/apt/sources.list;
+        echo "deb http://http.debian.net/debian/ jessie-updates main contrib non-free" >> /etc/apt/sources.list;
+        echo "deb http://http.debian.net/debian/ jessie-backports main contrib non-free" >> /etc/apt/sources.list;
+        echo "Passo 2 - Atualizando lista de repositorios..."; apt-get update;
+        echo "Passo 3 - Instalando pacotes essenciais...";
+        apt-get -y install openssh-server openssh-client git;
+    #comando de atualização
+
+    sleep 1 #aguardar 1 segundo depois exibe a mensagem abaixo
+    echo "Configurações realizadas com sucesso!"
+else
+    echo "Sistema não configurado"
+    sleep 2
+fi
