@@ -23,7 +23,7 @@ if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
     
     echo "Deseja instalar sistema na memoria interna?"
     read OPCAOMEMORIA
-    if [ "$OPCAOMEMORIA" -eq 1];
+    if [ "$OPCAOMEMORIA" -eq 1]; then
         
         echo "Instalando sistema na memoria interna do dispositivo...";
         nand-sata-install;
