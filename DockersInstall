@@ -16,12 +16,13 @@ read OPCAO #guarda opção inserida pelo usuário
 if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
 
     echo "Removendo instalacoes antigas...";
-        apt-get remove docker docker-engine docker.io;
+        apt-get -y remove docker docker-engine docker.io;
     echo "Passo 1 - Atualizando sistema...";
         apt-get update;
     echo "Passo 2 - Instalando dependencias...";
-        apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common;
-    echo "Passo 3 - Obtendo GPG KEY...";
+        apt-get -y install lsb-core;
+        apt-get -y install apt-transport-https ca-certificates curl software-properties-common;
+            echo "Passo 3 - Obtendo GPG KEY...";
         curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -;
         apt-key fingerprint 0EBFCD88;
     echo "Passo 4 - Adicionando nova entrada ao repositorio...";
@@ -29,7 +30,7 @@ if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
     echo "Passo 5 - Atualizando sistema...";
         apt-get update;
     echo "Passo 6 - Instalando Docker...";
-        apt-get install docker;
+        apt-get -y install docker;
     echo "Passo 7 - Validando instalacao do Docker...";
         docker run hello-world;
     #comando de atualização
