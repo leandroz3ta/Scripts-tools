@@ -2,11 +2,11 @@
 #autor: Leandro z3ta
 #Em caso de bugs enviar um email para
 #email: leandroz3ta@gmail.com
-#Debian Essentials - Install Jenkins
+#Debian Essentials - Install Docker
 
 
 echo "***********************************************************"
-echo "*         Debian Essentials  - install Jenkins            *"
+echo "*         Debian Essentials  - install docker             *"
 echo "*                  Ver. 0.1.0                             *"
 echo "***********************************************************"
 
