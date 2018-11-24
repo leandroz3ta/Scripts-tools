@@ -45,6 +45,6 @@ if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
     sleep 1 #aguardar 1 segundo depois exibe a mensagem abaixo
     echo "Configurações realizadas com sucesso!"
 else
-    echo "Sistema não configurado"
-    sleep 2
+    echo "Sistema não configurado";
+    sleep 2;
 fi
