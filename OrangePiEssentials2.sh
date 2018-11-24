@@ -16,10 +16,12 @@ do
     		apt-get install nano;
     		apt-get install wpa_supplicant;
     		echo "Pacotes basicos instalados.";
+		echo "Digite 0 para sair ou 9 para menu Inicial.";
 		;;
 	2)
     		echo "Instalando sistema na memoria interna do dispositivo...";
     		nand-sata-install;
+		echo "Digite 0 para sair ou 9 para menu Inicial.";
 		;;
 	3)
 		echo "Habilitando entrada g_serial no arquivo modules..."
@@ -45,12 +47,21 @@ do
 		echo "Reiniciando sistema...";
 		reboot;
 		;;
+	9)
+		echo "Selecione uma das opcoes abaixo:";
+		echo "1) Instalacao pacotes basicos de ambiente.";
+		echo "2) Instalacao instalar sistema na memoria interna.";
+		echo "3) Habilitar acesso serial via OTG.";
+		echo "4) Instalacao pacotes I2c.";
+		echo "0) Finalizar assistende de conficuracao";
+		;;
 	0)
 		echo "Ate logo! =)"
 		break
 		;;
 	*)
 		echo "Opcao invalida!"
+		echo "Digite 0 para sair ou 9 para menu Inicial.";
 		;;
   esac
 done
