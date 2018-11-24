@@ -21,7 +21,6 @@ if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
         
         echo "Instalando sistema na memoria interna do dispositivo...";
         nand-sata-install;
-    else
     echo "Passo 1 - Iniciando upgrade do sistema...";
         apt-get update;
         apt-get upgrade;
