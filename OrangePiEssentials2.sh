@@ -3,8 +3,8 @@
 echo "Selecione uma das opcoes abaixo:";
 echo "1) Instalacao pacotes basicos de ambiente.";
 echo "2) Instalacao instalar sistema na memoria interna.";
-echo "3) Instalacao pacotes I2c.";
-echo "4) Habilitar acesso serial via OTG.";
+echo "3) Habilitar acesso serial via OTG.";
+echo "4) Instalacao pacotes I2c.";
 echo "0) Finalizar assistende de conficuracao";
 while :
 do
@@ -26,13 +26,12 @@ do
 		echo "g_serial" >> /etc/modules;
 		echo "Criando diretorios necessarios...";
 		mkdir -p /etc/systemd/system/serial-getty@ttyGS0.service.d;
-		
-		apt-get install -y i2c-tools;
-		echo "Habilitando i2c...";
-		echo "i2c-dev" >> /etc/modules;
-		echo "Adicinando user I2c...";
-		adduser orangepi i2c;
-		echo "Reiniciando sistema...";
+		echo "Copiando arquivos...";
+		cp 10-switch-role.conf /etc/systemd/system/serial-getty@ttyGS0.service.d;
+		echo "Finalizando a instalcacao..."
+		systemctl --no-reload enable serial-getty@ttyGS0.service;
+		echo "ttyGS0" >> /etc/securetty;
+		echo "Reiniciando dispositivo..."
 		reboot;
 		;;
 	4)
