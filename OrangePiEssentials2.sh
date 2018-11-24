@@ -4,6 +4,7 @@ echo "Selecione uma das opcoes abaixo:";
 echo "1) Instalacao pacotes basicos de ambiente.";
 echo "2) Instalacao instalar sistema na memoria interna.";
 echo "3) Instalacao pacotes I2c.
+echo "0) Finalizar assistende de conficuracao";
 while :
 do
   read INPUT_STRING
@@ -29,6 +30,10 @@ do
 		adduser orangepi i2c;
 		echo "Reiniciando sistema...";
 		reboot;
+		;;
+	3)
+		echo "Ate logo! =)"
+		break
 		;;
 	*)
 		echo "Opcao invalida!"
