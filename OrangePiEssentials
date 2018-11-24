@@ -14,7 +14,14 @@ echo "Você deseja realizar  a configuração do sistema?  Digite 1)Sim  0)Não"
 read OPCAO #guarda opção inserida pelo usuário
 
 if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
-
+    
+    echo "Deseja instalar sistema na memoria interna?"
+    read OPCAOMEMORIA
+    if [ "$OPCAOMEMORIA" -eq 1];
+        
+        echo "Instalando sistema na memoria interna do dispositivo...";
+        nand-sata-install;
+    else
     echo "Passo 1 - Iniciando upgrade do sistema...";
         apt-get update;
         apt-get upgrade;
