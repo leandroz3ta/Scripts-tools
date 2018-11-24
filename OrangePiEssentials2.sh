@@ -1,4 +1,17 @@
 #!/bin/sh
+#autor: Leandro z3ta
+#Em caso de bugs enviar um email para
+#email: leandroz3ta@gmail.com
+#Orange Pi Essentials
+
+
+echo "***********************************************************"
+echo "*              Orange pi PC Essentials                    *"
+echo "*                  Ver. 2018-1124-0.1.0         		*"
+echo "*		    						*"
+echo "*	 	Atencao! Este script foi testado apenas		*"
+echo "*	      na dristibuicao ARMBIAN baseado no Debian 8	*"
+echo "***********************************************************"
 
 echo "Selecione uma das opcoes abaixo:";
 echo "1) Instalacao pacotes basicos de ambiente.";
