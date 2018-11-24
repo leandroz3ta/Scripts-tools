@@ -14,6 +14,12 @@ echo "Você deseja realizar  a configuração do sistema?  Digite 1)Sim  0)Não"
 read OPCAO #guarda opção inserida pelo usuário
 
 if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
+
+    echo "preparando pacotes basicos do ambiente...";
+    apt-get update;
+    apt-get install nano;
+    apt-get install wpa_supplicant;
+    echo "Pacotes basicos instalados.";
     
     echo "Deseja instalar sistema na memoria interna?"
     read OPCAOMEMORIA
