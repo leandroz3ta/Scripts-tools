@@ -27,7 +27,8 @@ do
 		echo "Digite 0 para sair ou 9 para menu Inicial.";
 		;;
 	9)
-    figlet Docker Essentials Image v. 1.0
+	clear
+    	figlet Docker Essentials Image v. 1.0
 
     echo "Selecione o tipo de ambiente a ser instalado:";
     echo "1) Ambiente web.";
