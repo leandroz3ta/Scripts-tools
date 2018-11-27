@@ -21,7 +21,8 @@ if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
     echo "Passo 1 - Atualizando sistema...";
         apt-get update;
     echo "Passo 2 - Instalando dependencias...";
-        apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common;
+        apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common figlet;
+        figlet z3ta Tools 1.0
     echo "Passo 4 - Adicionando nova entrada ao repositorio...";
         curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -;
         add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable";
