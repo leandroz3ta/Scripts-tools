@@ -8,6 +8,7 @@
 echo "***********************************************************"
 echo "*         Debian Essentials  - install docker             *"
 echo "*                  Ver. 0.1.0                             *"
+echo "*                Use in Debian 9                          *"
 echo "***********************************************************"
 
 echo "Você deseja realizar  a configuração do sistema?  Digite 1)Sim  0)Não"
@@ -20,19 +21,16 @@ if [ "$OPCAO" -eq 1 ]; then  #analisa a escolha digitada pelo usuário
     echo "Passo 1 - Atualizando sistema...";
         apt-get update;
     echo "Passo 2 - Instalando dependencias...";
-        apt-get -y install lsb-core;
-        apt-get -y install apt-transport-https ca-certificates curl software-properties-common;
-            echo "Passo 3 - Obtendo GPG KEY...";
-        curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -;
-        apt-key fingerprint 0EBFCD88;
+        apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common;
     echo "Passo 4 - Adicionando nova entrada ao repositorio...";
+        curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -;
         add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable";
     echo "Passo 5 - Atualizando sistema...";
         apt-get update;
     echo "Passo 6 - Instalando Docker...";
-        apt-get -y install docker;
+        apt -y install docker-ce;
     echo "Passo 7 - Validando instalacao do Docker...";
-        docker run hello-world;
+        docker;
     #comando de atualização
 
     sleep 1 #aguardar 1 segundo depois exibe a mensagem abaixo
