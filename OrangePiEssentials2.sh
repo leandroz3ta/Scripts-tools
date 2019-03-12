@@ -60,12 +60,22 @@ do
 		echo "Reiniciando sistema...";
 		reboot;
 		;;
+	5)
+	        echo "Gravando URL de download do Java na lista de repositorios..."; 
+	        echo "===> deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" >> /etc/apt/sources.list; 
+	        echo "Gerando chaves de validacao..."; 
+	        apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886; 
+	        echo "Atualizando lista de repositorios..."; 
+	        apt-get update; 
+	        echo "Instalando Oracle Java..."; 
+                apt-get -y install oracle-java8-installer oracle-java8-set-default; 
 	9)
 		echo "Selecione uma das opcoes abaixo:";
 		echo "1) Instalacao pacotes basicos de ambiente.";
 		echo "2) Instalacao instalar sistema na memoria interna.";
 		echo "3) Habilitar acesso serial via OTG.";
 		echo "4) Instalacao pacotes I2c.";
+		echo "5) Instalacao Oracle Java.";
 		echo "0) Finalizar assistende de conficuracao";
 		;;
 	0)
