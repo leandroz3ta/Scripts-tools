@@ -7,7 +7,7 @@
 
 echo "***********************************************************"
 echo "*              Orange pi PC Essentials                    *"
-echo "*                  Ver. 2018-1124-0.1.0         		*"
+echo "*                  Ver. 2019-0311-0.2.0         		*"
 echo "*		    						*"
 echo "*	     Atencao! Este script foi testado apenas           *"
 echo "*	    na dristibuicao ARMBIAN baseado no Debian 8        *"
