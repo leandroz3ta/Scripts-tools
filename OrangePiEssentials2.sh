@@ -7,7 +7,7 @@
 
 echo "***********************************************************"
 echo "*              Orange pi PC Essentials                    *"
-echo "*                  Ver. 2019-0311-0.2.0         		*"
+echo "*                  Ver. 2019-0311-0.2.2         		*"
 echo "*		    						*"
 echo "*	     Atencao! Este script foi testado apenas           *"
 echo "*	    na dristibuicao ARMBIAN baseado no Debian 8        *"
@@ -18,6 +18,7 @@ echo "1) Instalacao pacotes basicos de ambiente.";
 echo "2) Instalacao instalar sistema na memoria interna.";
 echo "3) Habilitar acesso serial via OTG.";
 echo "4) Instalacao pacotes I2c.";
+echo "5) Instalacao Oracle Java 8.";
 echo "0) Finalizar assistende de conficuracao";
 while :
 do
