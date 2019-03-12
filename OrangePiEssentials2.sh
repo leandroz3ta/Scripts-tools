@@ -69,6 +69,7 @@ do
 	        apt-get update; 
 	        echo "Instalando Oracle Java..."; 
                 apt-get -y install oracle-java8-installer oracle-java8-set-default; 
+		;;
 	9)
 		echo "Selecione uma das opcoes abaixo:";
 		echo "1) Instalacao pacotes basicos de ambiente.";
